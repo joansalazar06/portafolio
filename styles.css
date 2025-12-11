@@ -223,8 +223,8 @@ input, textarea {
 }
 
 @media(max-width: 860px) {
-  .hero-grid,
-  .contact-grid {
+  .hero-grid,.contact-grid 
+  {
     grid-template-columns: 1fr;
   }
   .nav { display: none; }
