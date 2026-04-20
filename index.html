@@ -1,162 +1,155 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <!-- Content Security Policy básica (seguridad) -->
-        <meta http-equiv="Content-Security-Policy"
-            content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'">
+    <!-- Content Security Policy básica (seguridad) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://wa.me https://*.whatsapp.com"
+    />
 
-        <title>Portafolio - Ingeniero de Software</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+    <title>Portafolio - Ingeniero de Software</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-    <body>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1 class="brand">JS<span>.</span></h1>
+        <nav class="nav">
+          <a href="#hero">Inicio</a>
+          <a href="#skills">Tech Stack</a>
+          <a href="#projects">Portafolio</a>
+          <a href="#contact">Hablemos</a>
+        </nav>
+      </div>
+    </header>
 
-        <header class="topbar">
-            <div class="container">
-                <h1 class="brand">Joan Salazar — Ingeniero de Software</h1>
-                <nav class="nav">
-                    <a href="#about">Sobre mí</a>
-                    <a href="#skills">Habilidades</a>
-                    <a href="#projects">Proyectos</a>
-                    <a href="#contact">Contacto</a>
-                </nav>
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero-wrapper">
+          <div class="hero-content">
+            <span class="badge">Disponible para trabajar</span>
+            <h2>Hola, soy <span class="highlight">Joan Salazar</span></h2>
+            <p class="hero-p">
+              Ingeniero de Software Junior especializado en el ecosistema
+              <strong>Web & E-commerce</strong>. Transformo ideas en soluciones
+              escalables mediante automatización y arquitecturas modernas.
+            </p>
+            <div class="cta">
+              <a
+                class="btn btn-primary"
+                href="https://drive.google.com/file/d/1n2rENT7od8le0kXbRi0Yy-wU1g0vi_y4/view?usp=sharing"
+                target="_blank"
+                >Descargar CV</a
+              >
+              <a
+                class="btn btn-secondary"
+                href="https://drive.google.com/file/d/17ZMePIEh7k_Tub7SwPGsfSBhzdz2ImTD/view?usp=sharing"
+                target="_blank"
+                >Certificados</a
+              >
             </div>
-        </header>
+          </div>
+          <div class="hero-card">
+            <img
+              class="profile"
+              src="img/foto-01.img/Foto Actualizada.jpg"
+              alt="Joan Salazar Profile"
+            />
+          </div>
+        </div>
+      </section>
 
-        <main>
+      <section id="skills" class="container skills">
+        <h2>Habilidades</h2>
 
-            <section id="hero" class="hero">
-                <div class="container hero-grid">
+        <div class="skills-grid">
+          <div class="skill python">python</div>
+          <div class="skill javascript">javascript</div>
+          <div class="skill React">React & Next.js</div>
+          <div class="skill html">html & css</div>
+          <div class="skill SQL">SQL / PostgreSQL</div>
+          <div class="skill Docker">Docker</div>
+        </div>
+      </section>
 
-                    <div class="hero-card">
-                        <img class="profile"
-                            src="img/foto-01.img/Foto Actualizada.jpg"
-                            alt="Foto" height="40%">
+      <section id="projects" class="container projects">
+        <h2>Proyectos</h2>
+        <div class="projects-grid" id="projects-grid"></div>
+      </section>
 
-                        <h2>Hola, soy Joan</h2>
-                        <p>Ingeniero de Software Junior, Auxiliar de desarrollo
-                            Web , E-commerce shopify , Marketing Digital, Automatizacion
-                            8n8, Arquitetura de Software
-                            <div class="cta">
-                                <a class="btn"
-                                    href="https://drive.google.com/file/d/161snMPRAT70wPZRx2h2GUrXpYrNrBTTI/view?usp=sharing"
-                                    download target="_blank" rel="noopener noreferrer" >Descargar CV</a>
-                                    <a class="btn"
-                                    href="https://drive.google.com/file/d/1myAN4Qyz1d4Q8Ub0mH3-dtxbKhcCG008/view?usp=sharing"
-                                    download target="_blank" rel="noopener noreferrer">Certificados</a>
-                                
-                            </div>
+      <section id="contact" class="container contact">
+        <h2>Contacto</h2>
 
-                            
-                           
-                        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Conectemos</h3>
+            <p>
+              Estoy abierto a nuevas oportunidades y colaboraciones. ¡Hablemos!
+            </p>
+            <div class="social-icons">
+              <a
+                href="mailto:Salazargomezjoancamilo@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/foto-01.img/gmail2.png" alt="Email"
+              /></a>
+              <a
+                href="https://wa.me/573118874675"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/foto-01.img/image.png" alt="WhatsApp"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/camilo-salazar-0661b8369"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/foto-01.img/linkidin.png" alt="LinkedIn"
+              /></a>
+              <a
+                href="https://www.instagram.com/camilosalazar7270/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/foto-01.img/insta3.jpg" alt="Instagram"
+              /></a>
+              <a
+                href="https://github.com/joansalazar06"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/foto-01.img/git.jpg" alt="GitHub"
+              /></a>
+            </div>
+          </div>
 
-                        <div class="hero-panel">
-                            <h3>Proyectos destacados</h3>
-                            <ul class="project-list" id="project-list"></ul>
-                        </div>
+          <form id="contact-form" autocomplete="on">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" required />
 
-                    </div>
-                </section>
+            <label for="email">Correo</label>
+            <input type="email" id="email" required />
 
-                <section id="skills" class="container skills">
-                    <h2>Habilidades</h2>
+            <label for="message">Mensaje</label>
+            <textarea id="message" rows="5" required></textarea>
 
-                    <div class="skills-grid">
+            <div class="form-actions">
+              <button type="submit" class="btn">Enviar</button>
+              <button type="button" id="clear" class="btn btn-outline">
+                Borrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
 
-                        <div class="skill python">python</div>
-                        <div class="skill javascript">javascript</div>
-                        <div class="skill React">React & Next.js</div>
-                        <div class="skill html ">html & css</div>
-                        <div class="skill SQL">SQL / PosgretSQL</div>
-                        <div class="skil Docker">Docker</div>
-
-                    </div>
-
-                    </section>
-
-                    <section id="projects" class="container projects">
-                        <h2>Proyectos</h2>
-                        <div class="projects-grid" id="projects-grid"></div>
-                    </section>
-
-                    <section id="contact" class="container contact">
-                        <h2>Contacto</h2>
-
-                        <div class="contact-grid">
-                            
-                                <a href="https://Salazargomezjoancamilo@gmail.com" target="_blank"
-                                    rel="noopener noreferrer"><img src="img/foto-01.img/gmail2.png", height="30%"></a>
-                                   
-            
-                                <a href="https://wa.me/573118874675" target="_blank"
-                                    rel="noopener noreferrer"><img src="img/foto-01.img/image.png", height="30%"></a>
-
-                                <a href="https://www.linkedin.com/in/camilo-salazar-0661b8369" target="_blank"
-                                    rel="noopener noreferrer"><img src="img/foto-01.img/linkidin.png", height="30%"></a>
-                                 
-                                <a href="https://www.instagram.com/camilosalazar7270/" target="_blank"
-                                    rel="noopener noreferrer"><img src="img/foto-01.img/insta3.jpg", height="30%"></a>
-                                 
-                                 <a href="https://github.com/joansalazar06" target="_blank"
-                                    rel="noopener noreferrer"><img src="img/foto-01.img/git.jpg " height="30%"></a>
-                                 
-            
-                                 </div>
-           
-                           
-
-                            <form id="contact-form" autocomplete="on">
-
-                                <label for="name">Nombre</label>
-                                <input type="text" id="name" required>
-
-                                <label for="email">Correo</label>
-                                <input type="email" id="email" required>
-
-                                <label for="message">Mensaje</label>
-                                <textarea id="message" rows="5"
-                                    required></textarea>
-
-                                <div class="form-actions">
-                                    <button type="submit"
-                                        class="btn">Enviar</button>
-                                    <button type="button" id="clear"
-                                        class="btn btn-outline">Borrar</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </section>
-
-                </main>
-
-                <footer class="container footer">
-                    <p>© <span id="year"></span> Joan Salazar — Ingeniero de
-                        Software Junior</p>
-                </footer>
-
-                <template id="project-template">
-                    <li class="project-item">
-                        <img class="project-thumb" src="" alt="">
-                        <div class="project-content">
-                            <h4 class="project-title"></h4>
-                            <p class="project-desc"></p>
-
-                            <div class="project-links">
-                                <a class="link-live" target="_blank"
-                                    rel="noopener noreferrer">Ver</a>
-                                <a class="link-code" target="_blank"
-                                    rel="noopener noreferrer">Código</a>
-                            </div>
-                        </div>
-                    </li>
-                </template>
-
-                <script src="script.js" defer></script>
-
-            </body>
-        </html>
+    <footer class="container footer">
+      <p>
+        © <span id="year"></span> Joan Salazar — Ingeniero de Software Junior
+      </p>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

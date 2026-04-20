@@ -1,92 +1,45 @@
 // Lista de proyectos (cámbialos por los tuyos)
 const projects = [
-  {
-    title: 'App de Gestión',
-    desc: 'App web fullstack con React + Node + PostgreSQL.',
-    live: 'https://tu-sitio.com',
-    code: 'https://github.com/tu_usuario/gestion-app',
-    image: 'img/project1.jpg'
-  },
+ 
   {
     title: 'E-commerce',
-    desc: 'Tienda virtual creada con Shopify.',
-    live: 'https://ecommerce-demo.com',
-    code: 'https://github.com/tu_usuario/ecommerce'
+    desc: 'video Tienda virtual creada con Shopify.',
+    pdf: 'https://drive.google.com/file/d/17Y9pA6ihNjTAZZNnQt9ni3NwMNJTzbH4/view?usp=sharing', // Reemplaza con el enlace real a tu PDF
+    code: '',
+    image:  'img/energia.png'
   },
+  
+  
   {
-    title: 'API REST',
-    desc: 'API con JWT y tests automatizados.',
-    live: '',
-    code: 'https://github.com/tu_usuario/api-boilerplate'
+    title: 'Gnexis',
+    desc: 'Descripción detallada del proyecto Gnexis y su impacto.',
+    pdf: 'https://drive.google.com/file/d/1wJqpHET4y3PwetpKJ1x_y82KUXWFudj2/view?usp=sharing', // <--- Pega aquí el enlace de tu PDF
+    code: '', 
+    image: 'img/foto-01.img/gnexis.png' // Opcional: agrega una imagen del proyecto
   }
 ];
-
-// ============================
-// Render lista del panel lateral
-// ============================
-
-const projectList = document.getElementById('project-list');
-const template = document.getElementById('project-template');
-
-projects.forEach(p => {
-  const clone = template.content.cloneNode(true);
-  clone.querySelector('.project-title').textContent = p.title;
-  clone.querySelector('.project-desc').textContent = p.desc;
-
-  const thumb = clone.querySelector('.project-thumb');
-  if (p.image && thumb) {
-    thumb.src = p.image;
-    thumb.alt = p.title;
-  } else if (thumb) {
-    thumb.remove();
-  }
-
-  const live = clone.querySelector('.link-live');
-  const code = clone.querySelector('.link-code');
-
-  if (p.live) {
-    live.href = p.live;
-  } else {
-    live.remove();
-  }
-
-  code.href = p.code;
-
-  projectList.appendChild(clone);
-});
-
-
-// ============================
-// Render tarjetas grandes
-// ============================
 
 const projectsGrid = document.getElementById('projects-grid');
 
 projects.forEach(p => {
   const card = document.createElement('article');
   card.className = 'project-card';
-  card.innerHTML = `
-    <h3>${escapeHtml(p.title)}</h3>
-    <p>${escapeHtml(p.desc)}</p>
-    <div style="margin-top: .8rem; display:flex; gap:.6rem">
-      ${p.live ? `<a class="btn btn-outline" href="${p.live}" target="_blank">Ver</a>` : ''}
-      <a class="btn" href="${p.code}" target="_blank">Código</a>
-    </div>
-  `;
-
-  // Si el proyecto tiene imagen, aplicarla como fondo de la card
-  if (p.image ){
-    card.classList.add('has-bg');
-    card.style.backgroundImage = `url(${p.image})`;
+  
+  if (p.image) {
+    card.style.backgroundImage = `linear-gradient(rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.95)), url(${p.image})`;
     card.style.backgroundSize = 'cover';
     card.style.backgroundPosition = 'center';
-
-    // overlay para mejorar legibilidad
-    const overlay = document.createElement('div');
-    overlay.className = 'card-overlay';
-    card.appendChild(overlay);
   }
-
+  
+  card.innerHTML = `
+    <div class="project-content">
+      <h3>${escapeHtml(p.title)}</h3>
+      <p>${escapeHtml(p.desc)}</p>
+      <div class="project-actions" style="margin-top: 1.5rem;">
+        ${p.pdf ? `<a class="btn btn-primary" href="${p.pdf}" target="_blank" style="width:100%; text-align:center;">Ver Proyecto (PDF)</a>` : ''}
+      </div>
+    </div>
+  `;
   projectsGrid.appendChild(card);
 });
 
@@ -108,21 +61,21 @@ const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  if (!name || !email || !message) {
-    alert("Completa todos los campos.");
-    return;
-  }
-
-  const subject = encodeURIComponent(`Mensaje de ${name}`);
-  const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\n${message}`);
-
-  // mailto (simple). Para producción usa backend real.
-  window.location.href = `mailto:joan@example.com?subject=${subject}&body=${body}`;
+  
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  
+  // Tu número de WhatsApp con código de país
+  const phone = "573118874675"; 
+  
+  const text = encodeURIComponent(
+    `Hola, mi nombre es ${name}.\n\n` +
+    `*Correo:* ${email}\n` +
+    `*Mensaje:* ${message}`
+  );
+  
+  window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
 });
 
 // limpiar formulario
